@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+table#t01 {
+  width: 100%;    
+  background-color: #f1f1c1;
+}
+	</style>
+</head>
+<body>
+	<table border = 1 style="width: 100%" id="t01">
+		 <tr>
+    <th>Timestamp</th>
+    <th>Image Name</th> 
+    <th>Regions</th>
+  </tr>
+		{% for x in user_det%}
+
+		<tr>
+			<td>{{x[0]}}</td>
+			<td>{{x[1]}}</td>
+			<td>{{x[2]}}</td>
+		</tr>
+       {% endfor %}
+	</table>
+
+</body>
+</html>
